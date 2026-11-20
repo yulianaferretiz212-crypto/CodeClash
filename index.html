@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/css/all.min.css">
+    <link rel="stylesheet" href="dise.css">
+</head>
+<body>
+
+    <div class="carga">
+        <i class="fa-solid fa-spinner fa-spin-pulse" style="color: rgb(167, 199, 231);"></i>
+        <p class="carga-texto">Espere un momento...</p>
+    </div>
+    
+    <header>
+        <div class="titulo">
+            Code Clash Arena
+           <i class="fa-solid fa-user fa-beat" style="color: rgb(167, 199, 231);"></i>
+        </div>
+    </header>
+
+<div class="columnas">
+    <div class="padre-puntos">
+        <div class="contadores">
+            <span class="contador" id="resueltos">0 / 9</span>
+            <i class="fa-solid fa-circle-check fa-bounce" style="color: #1C2B48;"></i>
+        </div>
+        <div class="puntitos">
+            <span class="Mpuntos" id="puntos">0 pts</span>
+            <i class="fa-regular fa-star fa-beat" style="color: #1C2B48;"></i>
+        </div>
+    </div>
+
+    <div class="filtro-nivel"> 
+        Busca por nivel:
+        <button class="Todos activo" onclick="filtrar('todos', this)"> Todos</button>
+        <button class="Facil" onclick="filtrar('f-facil', this)"> Facil</button>
+        <button class="Medio" onclick="filtrar('f-medio', this)"> Medio</button>
+        <button class="Dificil" onclick="filtrar('f-dificil', this)"> Dificil</button>
+    </div>
+</div>
+
+<div>
+
+</div>
+
+<div class="contenedor">
+
+    <!-- 1 -->
+    <div class="tarjeta-1 c-azul f-facil">
+        <div class="parte-1"><img class="imagen1" src="imagen1.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Suma de números pares</div>
+            <p>Suma solo los números pares de una lista. Ejemplo: [1, 2, 3, 4] → 6 (porque 2 + 4).</p>
+            <div class="chips">
+                <span class="span-java">java</span>
+                <span class="span-arrays">arrays</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">50 pts</span>
+                <span class="nivel">Fácil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this,50)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav1" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav1">
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="tarjeta-1 c-noche f-dificil" >
+        <div class="parte-1"><img class="imagen1" src="imagen2.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Paréntesis balanceados</div>
+            <p>Revisa si cada paréntesis que se abre también se cierra. "(())" es correcto, "(()" no.</p>
+            <div class="chips">
+                <span class="span-java">javascript</span>
+                <span class="span-arrays">strings</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">200 pts</span>
+                <span class="nivel nivel-dificil">Difícil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 200)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav2" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav2">
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="tarjeta-1 c-lila f-medio" >
+        <div class="parte-1"><img class="imagen1" src="imagen3.jpeg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Números primos</div>
+            <p>Muestra los números primos del 1 al 100 (los que solo se dividen entre 1 y ellos mismos). Ejemplo: 2, 3, 5, 7...</p>
+            <div class="chips">
+                <span class="span-java">python</span>
+                <span class="span-arrays">bucles</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">100 pts</span>
+                <span class="nivel nivel-medio">Medio</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 100)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav3" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav3">
+            </div>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="tarjeta-1 c-cielo f-facil">
+        <div class="parte-1"><img class="imagen1" src="imagen4.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Invertir un texto</div>
+            <p>Recibe una palabra y devuélvela al revés. Ejemplo: "hola" → "aloh".</p>
+            <div class="chips">
+                <span class="span-java">javascript</span>
+                <span class="span-arrays">strings</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">50 pts</span>
+                <span class="nivel">Fácil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 50)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav4" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav4">
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="tarjeta-1 c-gris f-dificil">
+        <div class="parte-1"><img class="imagen1" src="imagen5.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Fibonacci</div>
+            <p>En la serie 0, 1, 1, 2, 3, 5, 8... cada número es la suma de los dos anteriores. Devuelve el de la posición n usando recursión.</p>
+            <div class="chips">
+                <span class="span-java">java</span>
+                <span class="span-arrays">recursión</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">200 pts</span>
+                <span class="nivel nivel-dificil">Difícil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 200)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav5" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav5">
+            </div>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="tarjeta-1 c-noche f-medio">
+        <div class="parte-1"><img class="imagen1" src="imagen6.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Palíndromo</div>
+            <p>Revisa si una palabra se lee igual al derecho y al revés. Ejemplo: "oso" sí, "gato" no.</p>
+            <div class="chips">
+                <span class="span-java">python</span>
+                <span class="span-arrays">strings</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">100 pts</span>
+                <span class="nivel nivel-medio">Medio</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 100)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav6" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav6">
+            </div>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="tarjeta-1 c-lila f-facil">
+        <div class="parte-1"><img class="imagen1" src="imagen7.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Contar vocales</div>
+            <p>Cuenta cuántas vocales (a, e, i, o, u) tiene una frase. Ejemplo: "hola mundo" → 4.</p>
+            <div class="chips">
+                <span class="span-java">python</span>
+                <span class="span-arrays">strings</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">50 pts</span>
+                <span class="nivel">Fácil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 50)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav7" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav7">
+            </div>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="tarjeta-1 c-azul f-dificil">
+        <div class="parte-1"><img class="imagen1" src="imagen8.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Ordenar sin sort</div>
+            <p>Ordena una lista de menor a mayor sin usar sort(). Ejemplo: [3, 1, 2] → [1, 2, 3].</p>
+            <div class="chips">
+                <span class="span-java">javascript</span>
+                <span class="span-arrays">arrays</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">200 pts</span>
+                <span class="nivel nivel-dificil">Difícil</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 200)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav8" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav8">
+            </div>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="tarjeta-1 c-cielo f-medio">
+        <div class="parte-1"><img class="imagen1" src="imagen9.jpg" alt=""></div>
+        <div class="parte-2">
+            <div class="t-card">Segundo número mayor</div>
+            <p>Encuentra el segundo número más grande de una lista. Ejemplo: [5, 9, 2, 7] → 7.</p>
+            <div class="chips">
+                <span class="span-java">java</span>
+                <span class="span-arrays">arrays</span>
+            </div>
+            <div class="spans">
+                <span class="puntaje">100 pts</span>
+                <span class="nivel nivel-medio">Medio</span>
+            </div>
+        </div>
+        <div class="parte-3">
+            <button class="resolver" onclick="resolver(this, 100)">Resolver</button>
+            <div class="cont-fav">
+                <i class="fa-regular fa-heart"></i>
+                <label for="fav9" class="fav">Favorito</label>
+                <input class="checkbox" type="checkbox" id="fav9">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <nav class="menu-movil">
+        <button class="nav-btn"><i class="fa-solid fa-user"></i></button>
+        <button class="nav-btn" onclick="togglePuntos()"><i class="fa-solid fa-star"></i></button>
+        <button class="nav-btn" onclick="toggleFiltros()"><i class="fa-solid fa-filter"></i></button>
+    </nav>
+    <script src="funcion.js"></script>
+</body>
+</html>
